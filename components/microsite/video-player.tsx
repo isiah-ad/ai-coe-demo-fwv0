@@ -118,15 +118,14 @@ export function VideoPlayer({ onTimeUpdate, seekTo }: VideoPlayerProps) {
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
-        <source src="https://aderant.vercel.app/vid.mp4" type="video/mp4" />
+        <source src="/demo-fwv0.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Controls overlay */}
       <div
-        className={`absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent transition-opacity duration-300 ${
-          showControls ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent transition-opacity duration-300 ${showControls ? "opacity-100" : "opacity-0"
+          }`}
       >
         {/* Center play button */}
         <button
