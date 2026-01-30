@@ -1,18 +1,18 @@
-# AI Web Crawler Demo
+# AI PDF Monitor for FormsWorkflow
 
-A demo of an AI-powered forms workflow and website crawler — a smarter replacement for traditional website watchers.
+A smarter replacement for website watchers and manual form monitoring. Uses AI to automatically track, extract, and compare PDF forms across court and government websites.
 
-## What It Does
+## The Problem
 
-- **Automated Form Monitoring** — Continuously monitors court and government websites, tracking form changes at scale
-- **AI-Powered Extraction** — Uses OCR and LLMs to extract structured data from unstructured PDFs
-- **Change Detection** — Automatically detects updated, missing, or relocated forms before they cause issues
+Teams manually check websites or rely on basic uptime monitors to track form changes. This is slow, error prone, and expensive.
 
-## Features
+## The Solution
 
-- Multi-domain support
-- Real-time processing
-- LLM-powered extraction
+Coral automates the entire process:
+
+- **Automated Monitoring** Continuously tracks PDF forms across jurisdictions
+- **AI Powered Extraction** Uses OCR and LLMs to extract structured data
+- **Change Detection** Instantly identifies updates, relocations, and missing forms
 
 ## Getting Started
 

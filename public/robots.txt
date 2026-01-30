@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Block all crawlers and indexing
+Noindex: /

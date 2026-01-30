@@ -14,13 +14,14 @@ export function HeroSection({ onTimeUpdate, seekTo }: HeroSectionProps) {
       <div className="max-w-5xl mx-auto">
         {/* Title */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-4 text-balance">
-          AI Web Crawler
+          AI PDF Monitor for FormsWorkflow
         </h1>
 
         {/* Subtitle */}
         <p className="text-base md:text-lg text-center text-muted-foreground max-w-2xl mx-auto mb-6 text-pretty">
-          Intelligent web crawling powered by AI. Extract, structure, and analyze 
-          web content with unprecedented accuracy and efficiency.
+          Replace manual website watching and legacy monitoring tools. Coral uses AI to 
+          automatically track, extract, and compare PDF forms across court and government 
+          websites, saving time and reducing errors.
         </p>
 
         {/* Quick stats */}
