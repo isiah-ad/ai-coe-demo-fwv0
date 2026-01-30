@@ -175,8 +175,13 @@ export function TimelineEntry({
                     Feature Explanation
                   </span>
                 </div>
-                <p className="text-sm text-foreground/90 leading-relaxed">
+                {/* Mobile/Tablet text */}
+                <p className="text-sm text-foreground/90 leading-relaxed lg:hidden">
                   {feature.transcriptExcerpt}
+                </p>
+                {/* Desktop text */}
+                <p className="text-sm text-foreground/90 leading-relaxed hidden lg:block">
+                  {feature.transcriptExcerptDesktop}
                 </p>
               </div>
             </div>
@@ -220,7 +225,7 @@ export function TimelineEntry({
                 </span>
               </div>
               <p className="text-sm text-foreground/90 leading-relaxed">
-                {feature.transcriptExcerpt}
+                {feature.transcriptExcerptDesktop}
               </p>
             </div>
 
