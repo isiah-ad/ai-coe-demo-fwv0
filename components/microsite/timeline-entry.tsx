@@ -92,27 +92,27 @@ export function TimelineEntry({
         {/* Expanded content */}
         <div
           className={`overflow-hidden transition-all duration-300 ${
-            isExpanded ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
+            isExpanded ? "max-h-[800px] opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
           <div className="flex flex-col lg:flex-row gap-4 pt-4 border-t border-border">
             {/* Screenshot */}
-            <div className="lg:w-1/2 aspect-video bg-muted rounded-lg overflow-hidden relative group/screenshot border border-border">
+            <div className="lg:w-1/2 bg-muted rounded-lg overflow-hidden relative group/screenshot border border-border">
               {feature.screenshotUrl ? (
                 <Image
                   src={feature.screenshotUrl || "/placeholder.svg"}
                   alt={feature.screenshotPlaceholder}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
                 />
               ) : (
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <div className="aspect-video flex flex-col items-center justify-center">
                   <Monitor className="w-12 h-12 text-muted-foreground/40 mb-2" />
                   <p className="text-sm text-muted-foreground">{feature.screenshotPlaceholder}</p>
                 </div>
               )}
-              <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover/screenshot:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover/screenshot:opacity-100 transition-opacity pointer-events-none" />
             </div>
 
             {/* Transcript excerpt */}
