@@ -45,25 +45,22 @@ export function TimelineEntry({
 
       {/* Entry container */}
       <div
-        className={`relative pl-16 pr-4 py-4 cursor-pointer transition-all duration-300 ${
-          isActive || isExpanded
+        className={`relative pl-16 pr-4 py-4 cursor-pointer transition-all duration-300 ${isActive || isExpanded
             ? "bg-card border border-border rounded-lg ml-2 mr-2"
             : "hover:bg-card/50"
-        }`}
+          }`}
         onClick={handleClick}
       >
         {/* Timeline dot */}
         <div
-          className={`absolute left-4 top-6 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
-            isActive || isExpanded
+          className={`absolute left-4 top-6 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${isActive || isExpanded
               ? "bg-accent border-accent scale-110"
               : "bg-background border-border"
-          }`}
+            }`}
         >
           <div
-            className={`w-2 h-2 rounded-full transition-all ${
-              isActive || isExpanded ? "bg-accent-foreground" : "bg-muted-foreground/50"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${isActive || isExpanded ? "bg-accent-foreground" : "bg-muted-foreground/50"
+              }`}
           />
         </div>
 
@@ -83,17 +80,15 @@ export function TimelineEntry({
 
           {/* Expand indicator */}
           <ChevronRight
-            className={`w-5 h-5 text-muted-foreground flex-shrink-0 mt-1 transition-transform duration-300 ${
-              isExpanded ? "rotate-90" : ""
-            }`}
+            className={`w-5 h-5 text-muted-foreground flex-shrink-0 mt-1 transition-transform duration-300 ${isExpanded ? "rotate-90" : ""
+              }`}
           />
         </div>
 
         {/* Expanded content */}
         <div
-          className={`overflow-hidden transition-all duration-300 ${
-            isExpanded ? "max-h-[800px] opacity-100 mt-4" : "max-h-0 opacity-0"
-          }`}
+          className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-[800px] opacity-100 mt-4" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="flex flex-col lg:flex-row gap-4 pt-4 border-t border-border">
             {/* Screenshot */}
