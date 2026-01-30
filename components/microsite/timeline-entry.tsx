@@ -4,7 +4,7 @@ import React from "react"
 import Image from "next/image";
 import { useState } from "react";
 import type { Feature } from "@/lib/features-data";
-import { ChevronRight, Play, Monitor, FileText } from "lucide-react";
+import { ChevronRight, Monitor } from "lucide-react";
 
 interface TimelineEntryProps {
   feature: Feature;
@@ -73,9 +73,20 @@ export function TimelineEntry({
             </h3>
 
             {/* Short description */}
-            <p className="text-base text-muted-foreground">
+            <p className="text-base text-muted-foreground mb-2">
               {feature.description}
             </p>
+
+            {/* Highlights inline */}
+            {feature.highlights && (
+              <div className="flex flex-wrap gap-2">
+                {feature.highlights.map((highlight, idx) => (
+                  <span key={idx} className="text-xs px-2 py-1 bg-accent/10 text-accent rounded-full">
+                    {highlight}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Expand indicator */}
@@ -111,31 +122,10 @@ export function TimelineEntry({
             </div>
 
             {/* Transcript excerpt */}
-            <div className="lg:w-1/2 flex flex-col">
-              <div className="flex items-center gap-2 mb-3">
-                <FileText className="w-4 h-4 text-accent" />
-                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                  Feature Explanation
-                </span>
-              </div>
-              <p className="text-sm text-foreground/90 leading-relaxed mb-4">
+            <div className="lg:w-1/2 flex flex-col justify-center">
+              <p className="text-sm text-foreground/90 leading-relaxed">
                 {feature.transcriptExcerpt}
               </p>
-
-              {/* Highlights */}
-              {'highlights' in feature && feature.highlights && (
-                <div className="mt-auto">
-                  <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">Highlights</h4>
-                  <ul className="space-y-1.5">
-                    {feature.highlights.map((highlight, idx) => (
-                      <li key={idx} className="text-sm text-foreground/80 flex items-start gap-2">
-                        <span className="text-accent mt-0.5">•</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
           </div>
         </div>
