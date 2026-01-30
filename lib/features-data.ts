@@ -8,6 +8,7 @@ export interface Feature {
   screenshotPlaceholder: string;
   screenshotUrl?: string;
   highlights: string[];
+  icon: "Radar" | "Brain" | "GitCompare" | "Tags" | "Search";
 }
 
 export const features: Feature[] = [
@@ -26,6 +27,7 @@ export const features: Feature[] = [
       "Versioned PDF storage",
       "Change alerts"
     ],
+    icon: "Radar",
   },
   {
     id: "ai-understanding",
@@ -42,6 +44,7 @@ export const features: Feature[] = [
       "AI generated metadata",
       "Searchable foundation"
     ],
+    icon: "Brain",
   },
   {
     id: "change-comparison",
@@ -58,6 +61,7 @@ export const features: Feature[] = [
       "Text diff summaries",
       "Visual highlights"
     ],
+    icon: "GitCompare",
   },
   {
     id: "change-classification",
@@ -74,6 +78,7 @@ export const features: Feature[] = [
       "Rename identification",
       "Relocation discovery"
     ],
+    icon: "Tags",
   },
   {
     id: "search-filtering",
@@ -90,5 +95,6 @@ export const features: Feature[] = [
       "Jurisdiction filters",
       "Scales to thousands"
     ],
+    icon: "Search",
   },
 ];
