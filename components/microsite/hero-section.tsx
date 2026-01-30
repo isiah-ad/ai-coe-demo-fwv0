@@ -19,8 +19,8 @@ export function HeroSection({ onTimeUpdate, seekTo }: HeroSectionProps) {
 
         {/* Subtitle */}
         <p className="text-base md:text-lg text-center text-muted-foreground max-w-2xl mx-auto mb-6 text-pretty">
-          Replace manual website watching and legacy monitoring tools. Coral uses AI to 
-          automatically track, extract, and compare PDF forms across court and government 
+          Replace manual website watching and legacy monitoring tools. Coral uses AI to
+          automatically track, extract, and compare PDF forms across court and government
           websites, saving time and reducing errors.
         </p>
 
