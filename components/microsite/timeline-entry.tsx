@@ -4,9 +4,9 @@ import React from "react"
 import Image from "next/image";
 import { useState } from "react";
 import type { Feature } from "@/lib/features-data";
-import { 
-  ChevronRight, 
-  Monitor, 
+import {
+  ChevronRight,
+  Monitor,
   FileText,
   Radar,
   Brain,
@@ -142,7 +142,7 @@ export function TimelineEntry({
           >
             <div className="flex flex-col lg:flex-row gap-4 pt-4 border-t border-border">
               {/* Screenshot */}
-              <div 
+              <div
                 className="lg:w-1/2 bg-muted rounded-lg overflow-hidden relative group/screenshot border border-border cursor-zoom-in"
                 onClick={handleImageClick}
               >
@@ -196,7 +196,7 @@ export function TimelineEntry({
             </div>
             <DialogDescription>{feature.description}</DialogDescription>
           </DialogHeader>
-          
+
           {/* Large Image */}
           {feature.screenshotUrl && (
             <div className="rounded-lg overflow-hidden border border-border">
