@@ -46,16 +46,16 @@ export function TimelineEntry({
       {/* Entry container */}
       <div
         className={`relative pl-16 pr-4 py-4 cursor-pointer transition-all duration-300 ${isActive || isExpanded
-            ? "bg-card border border-border rounded-lg ml-2 mr-2"
-            : "hover:bg-card/50"
+          ? "bg-card border border-border rounded-lg ml-2 mr-2"
+          : "hover:bg-card/50"
           }`}
         onClick={handleClick}
       >
         {/* Timeline dot */}
         <div
           className={`absolute left-4 top-6 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${isActive || isExpanded
-              ? "bg-accent border-accent scale-110"
-              : "bg-background border-border"
+            ? "bg-accent border-accent scale-110"
+            : "bg-background border-border"
             }`}
         >
           <div
